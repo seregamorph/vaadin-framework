@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extensions>
+    <!--
+    https://docs.gradle.com/develocity/maven-extension/current/
+    This extension is used for maven build optimization and enhanced caching.
+    Config: develocity.xml
+    Use "-Dgradle.cache.local.enabled=false" to disable optimizations.
+    -->
+    <extension>
+        <groupId>com.gradle</groupId>
+        <artifactId>develocity-maven-extension</artifactId>
+        <version>1.22.1</version>
+    </extension>
+    <extension>
+        <groupId>com.github.seregamorph</groupId>
+        <artifactId>turbo-builder</artifactId>
+        <version>0.1-SNAPSHOT</version>
+    </extension>
+</extensions>
