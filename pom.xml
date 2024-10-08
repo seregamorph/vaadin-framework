@@ -395,8 +395,22 @@
                     <version>2.6</version>
                 </plugin>
                 <plugin>
+                    <groupId>com.github.seregamorph</groupId>
+                    <artifactId>turbo-builder-maven-plugin</artifactId>
+                    <version>0.1-SNAPSHOT</version>
+                </plugin>
+                <plugin>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>2.19.1</version>
+                    <executions>
+                        <execution>
+                            <id>default-test</id>
+                            <phase>pre-integration-test</phase>
+                            <goals>
+                                <goal>test</goal>
+                            </goals>
+                        </execution>
+                    </executions>
                 </plugin>
                 <plugin>
                     <artifactId>maven-failsafe-plugin</artifactId>
@@ -518,6 +532,17 @@
         </pluginManagement>
 
         <plugins>
+            <plugin>
+                <groupId>com.github.seregamorph</groupId>
+                <artifactId>turbo-builder-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>signal</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>animal-sniffer-maven-plugin</artifactId>
